@@ -1,10 +1,13 @@
 #include "headers.h"
 #include "functions.h"
 
-
 int main()
 
 {
+
+  cout << "Welcome to DictionaryPlusPlus\n";
+  cout << "Wriiten by https://github.com/arpitbatra123";
+  cout << "Let us Load the Dictionary file first\n";
 
   ifstream in;
 
@@ -28,21 +31,41 @@ int main()
     exit(1);
   }
 
-  // string queryWord;
-  // cout << "Enter word to query in the dictionary"
-  //      << "\n";
-  // getline(cin, queryWord);
+  int optionChoice;
 
-  // if (findMeaning(queryWord))
-  // {
+  cout << "----------------------------------------------------------\n";
 
-  //   cout << "Word is " << queryWord << " and  Meaning is" << dictionary[queryWord] << "\n";
-  // }
+  cout << "1. Search meaning of Word\n";
+  cout << "2. Add new Word into the dictionary\n";
+  cout << "3. Modify Meaning of word\n";
+  cout << "4.Delete  word from Dictionary\n";
 
-  // else
-  // {
-  //   cout << "The Word " << queryWord << " was not found\n";
-  // }
+  cout << "Enter Your Choice\n";
+
+  cin >> optionChoice;
+
+  switch (optionChoice)
+  {
+       case 1:
+        {
+          string queryWord;
+          cout << "Enter word to query in the dictionary\n";
+          getline(cin, queryWord);
+
+          if (findMeaning(queryWord))
+          {
+
+            cout << "Word is " << queryWord << " and  Meaning is" << dictionary[queryWord] << "\n";
+          }
+
+          else
+          {
+            cout << "The Word " << queryWord << " was not found\n";
+          }
+        }
+  }
+
+
 
   // string addThisWord, addThisMeaning;
   // cout << "Enter word to add to the dictionary"
@@ -73,7 +96,6 @@ int main()
   {
     cout << "The Word " << queryWord << " was not found\n";
   }
-
 
   return 0;
 }
