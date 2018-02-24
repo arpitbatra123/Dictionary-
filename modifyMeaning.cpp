@@ -1,21 +1,19 @@
-void modifyMeaning(string modifyMeaningOfThisWord) 
+void modifyMeaning(string modifyMeaningOfThisWord)
 {
-  if( dictionary.find(modifyMeaningOfThisWord)!= dictionary.end() )
-  {
-    dictionary.erase(modifyMeaningOfThisWord);
+    if (dictionary.find(modifyMeaningOfThisWord) != dictionary.end()) {
+        dictionary.erase(modifyMeaningOfThisWord);
 
-    string addThisMeaning;
-    cout << "Enter the meaning"
-         << "\n";
-    getline(cin, addThisMeaning);
-    dictionary.insert(make_pair(modifyMeaningOfThisWord,addThisMeaning));
+        string addThisMeaning;
+        cout << "Enter the meaning"
+             << "\n";
+        getline(cin, addThisMeaning);
+        dictionary.insert(make_pair(modifyMeaningOfThisWord, addThisMeaning));
 
-    cout<<"Meaning Successfully Modified\n";
-  }
+        cout << "Meaning Successfully Modified\n";
+    }
 
-  else{
+    else {
 
-    cout<<"Word Does not exist,Meaning cannot be modified\n";
-  }
-  
+        cout << "Word Does not exist,Meaning cannot be modified\n";
+    }
 }
