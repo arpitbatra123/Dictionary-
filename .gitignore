@@ -1,2 +1,6 @@
 prog
+*.out
+*.exe
+*.txt
+*.vscode
 
