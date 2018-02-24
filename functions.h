@@ -5,3 +5,4 @@
 #include "addMeaning.cpp"
 #include "deleteWord.cpp"
 #include "modifyMeaning.cpp"
+#include "writeChangesIntoFile.cpp"
